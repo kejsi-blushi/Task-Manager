@@ -1,38 +1,373 @@
-.App {
-  text-align: center;
+/* LOGIN FORM & PAGE */
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+.login h2 {
+  color: #014bac;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.login-form-container {
+  background-color: #ffffff;
+  padding: 80px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+form {
+  display: flex;
+  flex-direction: column;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+label {
+  margin-bottom: 8px;
+}
+h2 .login-form-container {
+  color: #0853df;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button {
+  margin-top: 10px;
+  background-color: #007bff;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #0056b3;
+}
+.dashboard-container {
+  max-width: 1000px;
+  margin: auto;
+  height: 100vh;
+  padding: 0;
+  margin-right: 8%;
+}
+.dashboard-container p,
+h1 {
+  color: #0346b9;
+}
+.dashboard-container h2 {
+  color: #daecff;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ADD TASK */
+.form-container {
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #ffffffe1;
+  color: #0057b3e1;
+  padding: 8px;
+  border-radius: 8px;
+  width: 50vw;
+  height: 90vh;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 10vh;
+  margin-left: 8vh;
+}
+.form-container .button-container {
+  margin-bottom: 50px;
+}
+.form-container h4 {
+  padding-top: 50px;
+}
+/* EDIT TASK */
+.task-edit {
+  height: 90vh;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffff;
+}
+
+/* USER MANAGEMENT */
+
+.user-management-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #ffffff;
+  padding: 50px;
+  margin: 50px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.335);
 }
 
-.App-link {
-  color: #61dafb;
+.user-management-heading {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.user-list-item {
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.user-list-item-text {
+  font-size: 1rem;
+}
+
+/* DASHBOARD */
+
+.task-board {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+.clickable-task {
+  color: #0154ad;
+}
+.column {
+  border: 1px solid #d6d6d6;
+  background-color: #f4f5f7;
+  border-radius: 8px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  max-height: 70vh;
+  width: 25vw;
+  height: 800vh;
+  justify-content: flex-start;
+}
+
+.column h2 {
+  color: #413f3fdd;
+  display: flex;
+  font-size: medium;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.sticky-header {
+  position: sticky;
+  top: 0;
+  background-color: #f4f5f7;
+  z-index: 100;
+}
+
+.column ul {
+  list-style-type: none;
+  padding: 10px;
+  margin: 0;
+}
+
+.column ul li {
+  margin-bottom: 8px;
+  padding: 25px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+}
+
+.column a {
+  text-decoration: none;
+  color: #000000;
+}
+
+/* PROFILE PAGE */
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #0057b3e1;
+  color: #ffff;
+  border-radius: 8px;
+  padding: 10px;
+  width: 30vw;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  margin-top: 20vh;
+}
+.profile-container h2 {
+  margin-bottom: 13px;
+}
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  overflow-y: auto;
+  color: #daecff;
+  margin: 35px 40px 30px;
+  padding-left: 20px;
+}
+.profile-details p {
+  margin: 2px;
+}
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0px;
+}
+
+.avatar-container {
+  margin-bottom: 10px;
+}
+
+.user-info {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.username {
+  margin: 0;
+}
+
+.role {
+  margin: 0;
+  text-align: center;
+  color: #2f405a; /* Add a color for additional styling */
+}
+
+/* TASKLIST */
+.task-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-list-item {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  margin-bottom: 12px;
+  list-style-type: none;
+}
+
+.task-list-item a {
+  text-decoration: none;
+  list-style-type: none;
+  color: #0057b3e1;
+}
+
+.task-list-item:hover {
+  background-color: #f0eded;
+}
+
+.task-list-page {
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  margin: 10px;
+}
+.task-list-page h1 {
+  margin-left: 40px;
+}
+.task-list {
+  margin-bottom: 10px;
+}
+
+/* TASK DETAILS */
+
+.task-container {
+  background-color: #fff;
+  color: #014bac;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 10px;
+  width: 30vw;
+  height: 60vh;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  margin-top: 20vh;
+  padding: 20px;
+}
+
+.task-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 30vw;
+  height: 60vh;
+  padding: 40px;
+  margin-top: 20px;
+}
+.task-detail .button-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.task-value {
+  color: #024cada9;
+}
+
+.task-field {
+  display: flex;
+  text-align: center;
+  padding-bottom: 2%;
+  color: #0057b3e1;
+}
+
+/* USER MENAGEMENT PAGE*/
+
+.user-management-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #0057b3e1;
+
+  color: #ffff;
+
+  border-radius: 10px;
+  width: 50vw;
+  height: 80vh;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  margin-top: 10vh;
+}
+
+.user-management-heading {
+  color: #ffffff;
+  font-size: 24px;
+  margin-bottom: 10px;
+  padding-top: 30px;
+}
+
+.user-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20vw;
+  margin-bottom: 10px;
+  border-radius: 18px;
+}
+
+.user-list-item-text {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: row;
 }
